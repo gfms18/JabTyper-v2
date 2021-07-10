@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JabTyper Gabriel</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&family=Tourney:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&family=Orbitron&family=Tourney:wght@700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <script>
+        localStorage.setItem("0", "fui comprar pão e me deparei com uma rua estreita!");
+        localStorage.setItem("1", "filósofo josino: não espere que vai acontecer um erro, por que vai aparecer um erro!");
+        localStorage.setItem("2", "as vezes, no silencio da noite, a noite fica silenciosa!")
+        localStorage.setItem("3", "a vida é uma peça de teatro que não permite ensaios. Por isso, cante, ria e viva intensamente.");
+        localStorage.setItem("4", "as vezes o que parece ser é o que é, o que não é, é, e o que é, chega a não ser!");
+        localStorage.setItem("5", "FraSes DiDicEs sAo eM sUa Maioria DiFicEis, pOreM a norMalIdadE dAs PeSsoaS!");
+        localStorage.setItem("6", "CerTo Dia PandorA, a CachorrA Que NaO cOnseGue fiCar quieTa um MinuTo, latiU pARa a dONa e moRreu.");
+        localStorage.setItem("7", "Se InsCRevaM nO caNal CangAço codE, deiXe o seu LIke e ativE o sIninho Para AprEnder tudO!");
+        localStorage.setItem("8", "mE achei Um PoUco RuIm ao SabEr quE eu TiVe qUe mAtaR um prEa paRa sALVar minha GaliNHa!");
+        localStorage.setItem("9", "Na lItErAtuRa BRaSiLeiRa EnCOntTrRamMos um mar De pérOLas PoéTIcaS pOr IsSo, AcREdiTe!");
+        localStorage.setItem("10", "Nõa imortpa a oderm das ltreas drtneo de uma pvarala, bsata que a pmrireia e a úmtila.");
+        localStorage.setItem("11", "F4C1L L3R QU4LQU3R M3N5AG3M S3M P3NS4R MU170, M4S V0CÊ 41NDA T3M QU3 P3NS4R UM P0UC0 M4IS!");
+        localStorage.setItem("12", "35P3RO QU3 O5 C13NT15T45 R35OLV4O 155O LOGO! L31O M3LHOR 4551M DO QU3 ASSIM!");
+        localStorage.setItem("13", "NVm 4sp3ct0, 0 1nv3st1gAdor d!z qV3 4 M3nssAgem qVe c1rcvl0u na InTernet 3Stava C0Rrecta!");
+        localStorage.setItem("14", "Na h0ra de 3scr3ver A esCRita, a Area ArreD0nDadA Est4 de uMa mAneiRa muiTo EfiC4az de enTendEr qu4l");
+        localStorage.setItem("=","================================================================================================================================");
+        localStorage.setItem("==","SEGUE ABAIXO A PONTUAÇÃO DOS JOGADORES");
+        localStorage.setItem("===","================================================================================================================================");
+        function getRandomArbitrary(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);//para sortear o numero minimo e maximo
+        }
+
+        var sortearFacil = getRandomArbitrary(0,4); //usei a func e atribui o minimo e maximo e coloquei o valor sorteado nessa variavel
+        var palavraEscolhida = localStorage.getItem(sortearFacil);//criei a variavel palavraescolhida e botei o resultado do sorteio nela e busquei essa palavra no localstorage
+        console.log(sortearFacil);//printei o numero sorteado
+        console.log(palavraEscolhida);//printei a palavra escolhida
+        
+        var sortearMedio = getRandomArbitrary(5, 10);
+        var palavraEscolhida2 = localStorage.getItem(sortearMedio);
+        console.log(sortearMedio);
+        console.log(palavraEscolhida2);
+
+        var sortearDificil = getRandomArbitrary(11, 15);
+        var palavraEscolhida3 = localStorage.getItem(sortearDificil);
+        console.log(sortearDificil);
+        console.log(palavraEscolhida3);
+
+        
+
+    </script>
+
+    <div class="modal-dificuldade">
+        <div class="dificuldades">
+            <form>
+                <div class="fase1box">
+                    <label for="fase1">Fase 1</label>
+                    <input type="radio" name="dificuldade" value="fase1" id="fase1">
+                </div>
+
+                <div class="fase2box">
+                    <label for="fase2">Fase 2</label>
+                    <input type="radio" name="dificuldade" value="fase2" id="fase2">
+                </div>
+
+                <div class="fase3box">
+                    <label for="fase3">Fase 3</label>
+                    <input type="radio" name="dificuldade" value="fase3" id="fase3">
+                </div>
+                <button type="submit" id="botao-escolher">Escolher</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="geral">
+        <div id="titulo">
+            <h1><span class="span-jab">Jab</span>Typer <span class="span-v2">V2</span></h1>
+        </div>
+        <div id="frases">
+            <i class="large material-icons">account_circle</i>
+            <input type="text" id="nome" placeholder="nome do jogador">
+            <ul class="informacoes">
+                <li>Você tem <span id="tempo">...</span> segundos</li>
+            </ul>
+        </div>
+        <div class="frase-escolhida">
+            <h3><span class="frase-da-dificuldade">dificuldade:</span> <span id="dif-esc"></span></h3>
+           <h3><span class="frase-para-digitar">Frase para digitar:</span> <span id="frase-esc"></span></h3><!--para selecionar a frase do banco de dados que o usuario escolheu-->
+        </div>
+        <div id="campo">
+            <textarea id="campo-digitacao" placeholder="Digite aqui..." cols="40" rows="6"></textarea>
+            <div id="mostrar-pontos">
+                <h2>voce fez <span id=pontinhos>0</span> pontos</h2>
+            </div>
+        </div>
+        <div id="botao">
+            <button id="botao-reset">Reset</button>
+            <button id="botao-dificuldade">Mudar Dificuldade</button>
+        </div>
+        <ul>
+            <li><span id="caracteres-digitados">0</span> <span id="caracdig">caracteres digitados</span></li>
+            <li><span id="palavras-digitadas">0</span> palavras</li>
+        </ul>
+
+        <div id="placar">
+            <h2 id="h2placar">Placar</h2>
+            <table id="tabela-resultado" border="1">
+                <thead>
+                    <th>Usuário</th>
+                    <th>Nº de palavras</th>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
